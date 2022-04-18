@@ -1,0 +1,248 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+:root {
+    --smiley-size : 64px;
+    --smiley-point-size : 8px; /** --smiley-size / 8 **/
+    --smiley-gradient : radial-gradient(circle at 20% 85%,  #666 10%, #888 70%, #FFF 100%);
+    --smiley-filter : 
+       invert( 0% ) 
+       sepia( 100% ) 
+       saturate( 2500% ) 
+       brightness( 150%  ) 
+       contrast( 90% );
+    --smiley-color__01 : 320deg;
+    --smiley-color__02 : 335deg;
+    --smiley-color__03 : 0deg;
+    --smiley-color__04 : 5deg;
+    --smiley-color__05 : 15deg;
+}
+
+.center__flex{
+    position : absolute;
+    top : 50%;
+    width : 100%;
+    background-color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block_satisfaction {
+   position : absolute;
+   height : calc(var(--smiley-size) + var(--smiley-size) / 2);
+   width  : calc( (var(--smiley-size) + var(--smiley-size) / 2) * 5);
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   /* border : 1px solid green; */
+ 
+}
+
+.satisfaction {
+    width : var(--smiley-size);
+    height : var(--smiley-size);
+    /* border : 1px solid red; */
+    
+}
+
+.smiley_def {
+    background : var(--smiley-gradient);
+    width : 100%;
+    height : 100%;
+    border-radius: 50%;
+}
+
+
+.smiley__1 { filter:  var(  --smiley-filter ) hue-rotate( var(--smiley-color__01) );}
+.smiley__2 { filter:  var(  --smiley-filter ) hue-rotate( var(--smiley-color__02) );}
+.smiley__3 { filter:  var(  --smiley-filter ) hue-rotate( var(--smiley-color__03) );}
+.smiley__4 { filter:  var(  --smiley-filter ) hue-rotate( var(--smiley-color__04) );}
+.smiley__5 { filter:  var(  --smiley-filter ) hue-rotate( var(--smiley-color__05) );}
+
+.face__1 {
+    /* background : green; */
+    position : absolute;
+    width : calc( var(--smiley-size) );
+    height : calc( var(--smiley-size) / 4);
+    top : calc(  (var(--smiley-size) / 8) * 5);
+}
+
+.face__2 {
+    /* background : green; */
+    position : absolute;
+    width : calc( var(--smiley-size) );
+    height : calc( var(--smiley-size) / 4);
+    top : calc(  (var(--smiley-size) / 8) * 4);
+}
+
+.face__3 {
+    /* background : green; */
+    position : absolute;
+    width : calc( var(--smiley-size) );
+    height : calc( var(--smiley-size) / 4);
+    top : calc(  (var(--smiley-size) / 8) * 3);
+}
+
+.face__4 {
+    /* background : green; */
+    position : absolute;
+    width : calc( var(--smiley-size) );
+    height : calc( var(--smiley-size) / 4);
+    top : calc(  (var(--smiley-size) / 8) * 2);
+}
+
+.face__5 {
+    /* background : green; */
+    position : absolute;
+    width : calc( var(--smiley-size) );
+    height : calc( var(--smiley-size) / 4);
+    top : calc(  (var(--smiley-size) / 8) * 1);
+}
+
+
+.brows {
+    margin : calc( var(--smiley-point-size) * -0.75 ) 0;
+    height : var(--smiley-point-size);
+    position : absolute;
+    width : calc( var(--smiley-size) * 5 / 6 );
+    left : calc( var(--smiley-size) * 1 / 6 );
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.brows > .lips__3:nth-child(1) {
+    transform: rotate(15deg);
+}
+
+.brows > .lips__3:nth-child(2) {
+    transform: rotate(-15deg);
+}
+
+.eyes {
+    /* background : red; */
+    height : var(--smiley-point-size);
+    position : absolute;
+    width : calc( var(--smiley-size) * 5 / 6 );
+    left : calc( var(--smiley-size) * 1 / 6 );
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.point {
+    width : var(--smiley-point-size);
+    /* height : var(--smiley-point-size); */
+    height :  100%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.lips {
+    position : absolute;
+    width : calc( var(--smiley-size) * 5 / 6 );
+    left : calc( var(--smiley-size) * 1 / 6 );
+    top : calc( var(--smiley-size) * 1 / 6 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lips__1 {
+    width : calc( var(--smiley-size) * 1 / 4 );
+    height : calc( var(--smiley-size) * 1 / 8 );
+    border-top : calc( var(--smiley-point-size) / 2) solid black;
+    border-radius: 50% 50% 0% 0%;
+}
+
+.lips__2 {
+    width : calc( var(--smiley-size) * 1 / 4 );
+    height : calc( var(--smiley-size) * 1 / 8 );
+
+    border-top: calc( var(--smiley-point-size) / 2) solid black;
+    border-radius: 50% 50% 0% 0%;
+}
+
+.lips__3 {
+    width : calc( var(--smiley-size) * 1 / 4 );
+    height : calc( var(--smiley-size) * 1 / 4 );
+
+    border-top : calc( var(--smiley-point-size) / 2) solid black;
+    border-radius: 0%;
+}
+
+.lips__4 {
+    margin : calc( var(--smiley-size) * -1 ) auto;
+    width : calc( var(--smiley-size) * 1 / 4 );
+    height : calc( var(--smiley-size) * 1 / 8 );
+
+    border-bottom : calc( var(--smiley-point-size) / 2) solid black;
+    border-radius: 50%;
+}
+
+.lips__5 {
+    width : calc( var(--smiley-size) * 1 / 4 );
+    height : calc( var(--smiley-size) * 1 / 32 ); 
+    border-bottom : calc( var(--smiley-point-size) / 2) solid black;
+    border-radius: 0% 0% 50% 50%;
+    background-color: black;
+}
+
+.eyes__animate_01 {
+    animation  : eyes_animate 2.75s cubic-bezier(0.4, 0.6, 0.6, 0.4)  infinite;
+    animation-delay: 75ms;
+}
+
+.eyes__animate_02 {
+    animation  : eyes_animate 3.25s cubic-bezier(0.4, 0.6, 0.6, 0.4)  infinite;
+    animation-delay: 175ms;
+}
+
+.eyes__animate_03 {
+    animation  : eyes_animate 4s cubic-bezier(0.4, 0.6, 0.6, 0.4)  infinite;
+    animation-delay: 500ms;
+}
+
+.eyes__animate_04 {
+    animation  : eyes_animate 2s cubic-bezier(0.4, 0.6, 0.6, 0.4)  infinite;
+    animation-delay: 250ms;
+}
+
+.eyes__animate_05 {
+    animation  : eyes_animate 3.5s cubic-bezier(0.4, 0.6, 0.6, 0.4)  infinite;
+    animation-delay: 5ms;
+}
+
+@keyframes eyes_animate {
+    0% {
+        margin : 0 0;
+        height : var(--smiley-point-size);
+    }
+    3% {
+        margin : var(--smiley-point-size) 0;
+        height : 0;
+    }
+    5% {
+        margin : 0 0;
+        height : var(--smiley-point-size);
+    }
+}
+
+.smiley__animation{
+    width : 100%;
+    height : 100%;
+    /* background-color: aqua; */
+}
+
+.smiley__animation:hover {
+    transform: translateX( calc( -0.5 * var(--smiley-point-size) ) );
+    transition: all 750ms;
+}
+
+.smiley__animation:not(:hover) {
+    transition: all 500ms;
+}
